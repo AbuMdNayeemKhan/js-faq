@@ -1,0 +1,153 @@
+.apply{
+    padding: 120px 0;
+    h2{
+        font-family: $helvetica;
+        font-weight: $light;
+        font-size: 65px;
+        font-style: normal;
+        margin-bottom: 60px;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    h3{
+        font-family: $helvetica;
+        font-weight: $light;
+        font-size: 44px;
+        font-style: normal;
+        margin-bottom: 50px;
+        color: #000000;
+    }
+
+    &-faq {
+        &-answer{
+          display: none;
+          background-color: rgba(252, 196, 53, 0.150);
+          padding: 35px 0 0 0;
+          margin-top: -20px;
+          transition: 1s;
+          margin-bottom: 30px;
+          &.show {
+            display: block;
+          }
+          h4{
+            position: relative;
+            font-size: $helvetica;
+            font-weight: $light;
+            font-size: 24px;
+            font-style: none;
+            margin: 0 120px 22px 20px;
+            &::before{
+              content: ' ';
+              position: absolute;
+              top: 50%;
+              right: 0;
+              height: 2px;
+              width: 80%;
+              background-color: #707070;
+            }
+          }
+          p{
+            font-size: $helvetica;
+            font-weight: $light;
+            font-size: 16px;
+            font-style: none;
+            margin: 0 120px 22px 20px;
+          }
+          form{
+            background-image: url('../img/form-bg.jpg');
+            background-size: cover;
+            background-position: center center;
+            padding-top: 100px;
+            padding:100px 60px;
+            .apply-faq-answer-inputs{
+              display: none;
+              display: grid;
+              grid-template-columns: repeat(2, 47%);
+              gap: 0 6%;
+              input{
+                padding: 22px 30px;
+                font-size: 20px;
+                text-transform: capitalize;
+                margin-bottom: 50px;
+              }
+            }
+            textarea{
+              width: 100%;
+              padding: 20px 30px;
+              font-size: 20px;
+              text-transform: capitalize;
+              margin-bottom: 50px;
+            }
+            .apply-faq-answer-submits{
+              display: flex;
+              justify-content: center;
+              gap: 50px 6%;
+              input{
+                border: 2px solid #000000;
+                border-radius: 12px;
+                font-family: $helvetica;
+                height: 50px;
+                width: 195px;
+                font-size: 20px;
+                padding: 5px;
+                background-color: #FFFFFF;
+                box-shadow: 2px 2px 4px gray;
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+        &-question {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border: 2px solid #9D9D9C;
+            padding: 20px;
+            font-family: $helvetica;
+            font-size: 24px;
+            font-weight: $light;
+            font-style: normal;
+            color: #000000;
+            margin-bottom: 20px;
+            &.active{
+              background-color: rgba(252, 196, 53, 0.150);
+              img{
+                rotate: 90deg;
+              }
+            }
+            h5{
+                margin: 0;
+                font-family: $helvetica;
+                font-size: 24px;
+                font-weight: $light;
+                font-style: normal;
+                color: #000000;
+            }
+          &-icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            img{
+                height: 30px;
+                width: 30px;
+            }
+            h5{
+                margin: 0;
+                font-family: $helvetica;
+                font-size: 24px;
+                font-weight: $light;
+                font-style: normal;
+                color: #000000;
+            }
+          }
+          &:hover {
+            cursor: pointer;
+          }
+          &.active {
+            color: purple;
+          }
+        }
+      }
+}
